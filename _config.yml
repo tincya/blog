@@ -1,0 +1,143 @@
+url: "https://nghichcode.com/beautiful-jekyll"
+baseurl: "/beautiful-jekyll"
+
+logo: /img/avatar-icon.jpg
+title: Nghịch Code
+description: Code một cách tốt hơn!
+
+navbar-links:
+  About Me: "aboutme"
+  Resources:
+    - Nghich Code: "http://nghichcode.com/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+  Others: "http://tincya.com"
+
+shortcut: "/img/shortcut.png"
+avatar: "/img/avatar-icon.jpg"
+
+navbar-col: "#FF9966"
+navbar-text-col: "#FFFFFF"
+navbar-children-col: "#FF9966"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+link-hover-col: "#e91e63"
+hover-col: "#0085A1"
+footer-col: "#FF9966"
+footer-text-col: "#ff2a2a"
+footer-link-col: "#ff2a2a"
+
+author:
+  name: Tin Cya
+
+social-network-links:
+  rss: true
+  email: "nghichcode@gmail.com"
+  facebook: kenghichcode
+  github: nghichcode
+  twitter: nghichcode
+  instagram: nghichcode
+  telephone: +84 36 484 0066
+
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+
+url-pretty: "NghichCode"
+
+excerpt_length: 50
+
+title-separator: "-"
+
+timezone: "Asia/Ho_Chi_Minh"
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
+
+link-tags: true
+
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Vagrantfile
+
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "Add a thumbnail image to your post."
+          placeholder: "Thumbnail"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap

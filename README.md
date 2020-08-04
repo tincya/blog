@@ -1,1 +1,3 @@
-# blog
+# NghichCode
+
+Jekyll theme, Ruby Server.
